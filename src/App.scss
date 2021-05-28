@@ -1,0 +1,130 @@
+@mixin fontColor($font, $color) {
+  font-size: $font;
+  color: $color;
+}
+
+.my-test {
+  padding: 50px 0;
+  .main {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 3px;
+    .top {
+      border: 1px solid #bebebe;
+      margin-bottom: 35px;
+      .header {
+        @include fontColor(25px, #333);
+        text-transform: uppercase;
+        border-bottom: 1px solid #bebebe;
+        padding: 20px 0;
+      }
+      .content {
+        padding: 35px;
+        img {
+          max-width: 38px;
+        }
+        .line-top,
+        .line-bottom {
+          display: flex;
+          justify-content: space-evenly;
+          text-align: center;
+          .text {
+            padding: 20px 0;
+            font-size: 22px;
+            height: 42px;
+          }
+        }
+        .line-center {
+          display: flex;
+          align-items: center;
+          margin-top: -34px;
+          padding-right: 35px;
+          &__item {
+            width: 100px;
+            margin-right: 40px;
+            text-align: center;
+            font-size: 22px;
+          }
+        }
+        .line-bottom {
+          img {
+            margin: 25px 0;
+          }
+          div {
+            margin-top: -17px;
+          }
+        }
+      }
+    }
+    .bottom {
+      border: 1px solid #bebebe;
+      .menu {
+        display: flex;
+        &-item {
+          width: 33.3%;
+          text-align: center;
+          padding-top: 20px;
+          border-right: 1px solid #bebebe;
+          img {
+            max-width: 32px;
+          }
+          h3 {
+            font-weight: unset;
+          }
+        }
+        &-item:last-child {
+          border-right: unset;
+        }
+      }
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.vertical {
+  width: 1px;
+  height: 32px;
+  background: #333;
+  margin: 0 auto;
+}
+.horizontal {
+  position: relative;
+  height: 1px;
+  background: #333;
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .my-test {
+    padding: 15px;
+    .main {
+      .bottom {
+        .menu-item {
+          padding: 20px 10px;
+        }
+      }
+    }
+  }
+}
