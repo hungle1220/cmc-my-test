@@ -9,7 +9,7 @@ function App() {
           <div className="header text-center bold">
             Nghiệp vụ tài sản cố định
           </div>
-          <div className="content">
+          <div className="content desktop">
             <div className="line line-top">
               <div className="line-top__item">
                 <img src={bt_menu_icon} alt="icon" />
@@ -53,6 +53,55 @@ function App() {
                 <div className="vertical" />
                 <img src={bt_menu_icon} alt="icon" />
                 <div className="text">Kiểm kê tài sản</div>
+              </div>
+            </div>
+          </div>
+          <div className="content mobile">
+            <div className="m__line-top">
+              <div className="item">
+                <img src={bt_menu_icon} alt="icon" />
+                <div className="text">
+                  Chuyển TS thuê tài <br /> chính thành TS sở hữu
+                </div>
+                <div className="vertical" />
+              </div>
+              <div className="item">
+                <img src={bt_menu_icon} alt="icon" />
+                <div className="text">Tính khấu hao</div>
+                <div className="vertical" />
+              </div>
+
+              <div className="item">
+                <img src={bt_menu_icon} alt="icon" />
+                <div className="text">Điều chuyển</div>
+                <div className="vertical" />
+              </div>
+            </div>
+            <div className="m__line-center">
+              <div className="horizontal">
+                <i className="arrow right"></i>
+              </div>
+              <div className="item">
+                <img src={bt_menu_icon} alt="icon" />
+                <div className="text">Ghi tăng</div>
+              </div>
+            </div>
+            <div className="m__line-bottom">
+              <div className="item">
+                <div className="vertical" />
+                <img src={bt_menu_icon} alt="icon" />
+                <div className="text">Kiểm kê tài sản</div>
+              </div>
+              <div className="item">
+                <div className="vertical" />
+                <img src={bt_menu_icon} alt="icon" />
+                <div className="text">Ghi giảm</div>
+              </div>
+
+              <div className="item">
+                <div className="vertical" />
+                <img src={bt_menu_icon} alt="icon" />
+                <div className="text">Đánh giá tài sản</div>
               </div>
             </div>
           </div>

@@ -5,6 +5,9 @@
 
 .my-test {
   padding: 50px 0;
+  .mobile {
+    display: none;
+  }
   .main {
     max-width: 1200px;
     margin: 0 auto;
@@ -118,7 +121,81 @@
 
 @media screen and (max-width: 768px) {
   .my-test {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: unset;
+    }
     padding: 15px;
+    .content {
+      padding: 35px 8px 80px !important;
+    }
+    .content.mobile {
+      display: flex;
+      .m__line {
+        &-top,
+        &-center,
+        &-bottom {
+          .item {
+            position: relative;
+            text-align: center;
+            margin-bottom: 25px;
+            img {
+              max-width: 24px;
+            }
+            .text {
+              font-size: 14px;
+            }
+            .vertical {
+              position: absolute;
+              margin-right: -51px;
+              width: 32px;
+              height: 1px;
+              background: #333;
+              right: 0;
+              top: 50%;
+            }
+          }
+        }
+        &-center {
+          margin-left: 51px;
+          .item {
+            margin-left: -40px;
+            margin-top: 16px;
+            width: 77px;
+          }
+          .horizontal {
+            width: 1px;
+            position: relative;
+            height: 100%;
+            background: #333;
+            margin-top: -15px;
+            .right {
+              transform: rotate(-135deg);
+              -webkit-transform: rotate(-135deg);
+            }
+            .arrow {
+              right: -4px;
+              top: 0;
+            }
+          }
+        }
+        &-bottom {
+          margin-left: -34px;
+          .item {
+            margin-left: 50px;
+            .vertical {
+              right: unset;
+              margin-left: -50px;
+            }
+            .text {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
     .main {
       .bottom {
         .menu-item {
